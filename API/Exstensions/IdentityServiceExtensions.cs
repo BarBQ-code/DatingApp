@@ -3,6 +3,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using API.Data;
+using API.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace API.Exstensions
 {
@@ -10,6 +13,13 @@ namespace API.Exstensions
     {
         public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration config)
         {
+            services.AddIdentityCore<AppUser>(opt => { })
+                .AddRoles<AppRole>()
+                .AddRoleManager<RoleManager<AppRole>>()
+                .AddSignInManager<SignInManager<AppUser>>()
+                .AddRoleValidator<RoleValidator<AppRole>>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+            
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -21,6 +31,12 @@ namespace API.Exstensions
                         ValidateAudience = false
                     };
                 });
+
+            services.AddAuthorization(opt =>
+            {
+                opt.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
+            });
+            
             return services;
         }
     }
