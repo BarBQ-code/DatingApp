@@ -26,8 +26,10 @@ export class MessagesComponent implements OnInit {
     this.messageService.getMessages(this.messageParams).subscribe(response => {
       this.messages = response.result;
       this.pagination = response.pagination;
+      this.loading = false;
+    }, () => {
+      this.loading = false;
     });
-    this.loading = false;
   }
 
   deleteMessage(id: number) {
