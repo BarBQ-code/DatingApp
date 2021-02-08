@@ -21,7 +21,7 @@ namespace API.Util
             CreateMap<Photo, PhotoDto>();
             CreateMap<MemberUpdateDto, AppUser>();
             CreateMap<RegisterDto, AppUser>()
-                .ForMember(dest => dest.Password,
+                .ForMember(dest => dest.PasswordHash,
                     opt => opt.MapFrom(src => Encoding.UTF8.GetBytes(src.Password)));
             CreateMap<Message, MessageDto>()
                 .ForMember(dest => dest.SenderPhotoUrl,
