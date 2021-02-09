@@ -1,4 +1,5 @@
 ﻿using API.Data;
+using API.Hubs;
 using API.Interfaces;
 using API.Services;
 using API.Util;
@@ -13,6 +14,8 @@ namespace API.Exstensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
+            services.AddSingleton<PresenceTracker>();
+            
             services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
 
             services.AddScoped<ITokenService, TokenService>();
