@@ -30,7 +30,7 @@ namespace API.Controllers
         {
             var username = User.GetUsername();
 
-            if (username == createMessageDto.RecipientUsername.ToUpper())
+            if (username.ToUpper() == createMessageDto.RecipientUsername.ToUpper())
             {
                 return BadRequest("You cannot send messages to yourself");
             }
