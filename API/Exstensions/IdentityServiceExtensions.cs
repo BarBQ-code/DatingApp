@@ -32,7 +32,7 @@ namespace API.Exstensions
                         ValidateIssuer = false,
                         ValidateAudience = false
                     };
-
+                    //Get the JWT for the hubs to work with
                     options.Events = new JwtBearerEvents
                     {
                         OnMessageReceived = context =>
