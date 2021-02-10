@@ -21,12 +21,8 @@ namespace API.Exstensions
             services.AddScoped<ITokenService, TokenService>();
             
             services.AddScoped<IPhotoUploadService, PhotoUploadService>();
-            
-            services.AddScoped<IUserRepository, UserRepository>();
 
-            services.AddScoped<ILikesReposirtory, LikesRepository>();
-
-            services.AddScoped<IMessageRepository, MessageRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             
             services.AddScoped<LogUserActivity>();
 
