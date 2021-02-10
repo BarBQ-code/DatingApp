@@ -6,7 +6,7 @@ using API.Util;
 
 namespace API.Interfaces
 {
-    public interface ILikesReposirtory
+    public interface ILikesRepository
     {
         Task<UserLike> GetUserLike(int sourceUserId, int likedUserId);
         Task<AppUser> GetUserWithLikes(int userId);
