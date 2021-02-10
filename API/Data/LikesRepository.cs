@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Data
 {
-    public class LikesRepository : ILikesReposirtory
+    public class LikesRepository : ILikesRepository
     {
         private readonly ApplicationDbContext _context;
 
