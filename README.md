@@ -14,4 +14,12 @@ Now you can run the project, to run in open the project folder in the terminal a
 Now a webserver should start, you can access the web app through: https://localhost:5001
 (note: it's important you enter the app through https and port 5001 rather than normal http and port 5000)
 
-That's it, you can use the app now
+There is seed data injected to the app everetime the database doens't exist so it feels more real and intuitive
+You can find the list of users in API/Data/UserSeedData.json
+
+All the users have the same password which is: Pa$$w0rd 
+and there is a special admin user which also password is: Pa$$w0rd, and it has special privilages
+
+e.g for a user:
+Username: clay
+Password: Pa$$w0rd
