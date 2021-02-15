@@ -32,14 +32,14 @@ export class ErrorInterceptor implements HttpInterceptor {
                 // @ts-ignore
                 throw modalStateErrors.flat();
               } else if (typeof (err.error) === 'object') {
-                this.toastr.error(err.statusText, err.status);
+                this.toastr.error(err.error[0].description || 'Something unexpected went wrong', err.status);
               } else {
-                this.toastr.error(err.error, err.status);
+                this.toastr.error(err.error[0].description || 'Something unexpected went wrong', err.status);
               }
               break;
             case 401:
               console.log(err);
-              this.toastr.error(err.statusText, err.status);
+              this.toastr.error(err.error[0].description || 'Something unexpected went wrong', err.status);
               break;
             case 404:
               this.router.navigateByUrl('/not-found');
