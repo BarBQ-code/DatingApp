@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="API.Data.ApplicationDbContext">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAEAAAAAACAAAAASAAAAA=</HashCode>
+      <FileName>Data\ApplicationDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser, TRole, TKey, TUserClaim, TUserRole, TUserLogin, TRoleClaim, TUserToken&gt;">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="API.Data.UnitOfWork">
+    <Position X="4.25" Y="4" Width="1.5" />
+    <AssociationLine Name="LikesRepository" Type="API.Interfaces.ILikesRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.048" Y="0.17" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_mapper" Type="AutoMapper.IMapper" ManuallyRouted="true">
+      <Path>
+        <Point X="5" Y="4" />
+        <Point X="5" Y="3.89" />
+        <Point X="6.106" Y="3.89" />
+        <Point X="6.106" Y="0.942" />
+        <Point X="8.25" Y="0.942" />
+        <Point X="8.25" Y="3.285" />
+        <Point X="8.323" Y="3.285" Type="JumpStart" />
+        <Point X="8.49" Y="3.285" Type="JumpEnd" />
+        <Point X="8.5" Y="3.285" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="MessageRepository" Type="API.Interfaces.IMessageRepository" ManuallyRouted="true">
+      <Path>
+        <Point X="5.75" Y="4.341" />
+        <Point X="5.977" Y="4.341" />
+        <Point X="5.977" Y="8.903" />
+        <Point X="8.438" Y="8.903" />
+        <Point X="8.438" Y="4.688" />
+        <Point X="9.167" Y="4.687" Type="JumpStart" />
+        <Point X="9.333" Y="4.688" Type="JumpEnd" />
+        <Point X="11.25" Y="4.688" />
+        <Point X="11.25" Y="4.334" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAIAAAAAABEIAAAABAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Data\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+      <Field Name="_mapper" />
+      <Property Name="LikesRepository" />
+      <Property Name="MessageRepository" />
+      <Property Name="UserRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="API.Data.LikesRepository">
+    <Position X="4.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAABAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Data\LikesRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.169" />
+  </Class>
+  <Class Name="API.Data.MessageRepository">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACEAAAAAAAAABAAAAABBAAAAAAAgAQAAAAAACBCBAAA=</HashCode>
+      <FileName>Data\MessageRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+      <Field Name="_mapper" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="API.Data.UserRepository">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <AssociationLine Name="_mapper" Type="AutoMapper.IMapper" ManuallyRouted="true">
+      <Path>
+        <Point X="2.25" Y="4" />
+        <Point X="2.25" Y="3.853" />
+        <Point X="3.647" Y="3.853" />
+        <Point X="3.647" Y="0.659" />
+        <Point X="8.406" Y="0.659" />
+        <Point X="8.406" Y="3.833" />
+        <Point X="8.5" Y="3.833" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAAAABQAAAAABAABAAAAAQAAAAAAAAACABAA=</HashCode>
+      <FileName>Data\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+      <Field Name="_mapper" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="API.Interfaces.ILikesRepository">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ILikesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="API.Interfaces.IMessageRepository">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACEAAAAAAAAAAAAAAABAAAAAAAAgAQAAAAAACBCBAAA=</HashCode>
+      <FileName>Interfaces\IMessageRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AutoMapper.IMapper">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="API.Interfaces.IUserRepository">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAAAAAQAAAAAAAABAAAAAQAAAAAAAAACABAA=</HashCode>
+      <FileName>Interfaces\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="API.Interfaces.IUnitOfWork">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAIAAAAAAAEIAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
