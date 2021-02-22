@@ -20,7 +20,7 @@ namespace API.Exstensions
 
             services.AddScoped<ITokenService, TokenService>();
             
-            services.AddScoped<IPhotoUploadService, PhotoUploadService>();
+            services.AddScoped<IPhotoService, PhotoService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             
