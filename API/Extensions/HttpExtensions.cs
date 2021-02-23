@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using Microsoft.AspNetCore.Http;
 
-namespace API.Exstensions
+namespace API.Extensions
 {
     public static class HttpExtensions
     {

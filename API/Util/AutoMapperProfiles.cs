@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using API.DTOs;
 using API.Entities;
-using API.Exstensions;
+using API.Extensions;
 using AutoMapper;
 
 namespace API.Util

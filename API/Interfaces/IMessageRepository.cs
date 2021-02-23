@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using API.DTOs;
 using API.Entities;
-using API.Exstensions;
+using API.Extensions;
 using API.Util;
 
 namespace API.Interfaces

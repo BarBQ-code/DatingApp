@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace API.Exstensions
+namespace API.Extensions
 {
     public static class ApplicationServiceExtensions
     {

@@ -9,7 +9,7 @@ using API.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace API.Exstensions
+namespace API.Extensions
 {
     public static class IdentityServiceExtensions
     {

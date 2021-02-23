@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.DTOs;
 using API.Entities;
-using API.Exstensions;
+using API.Extensions;
 using API.Interfaces;
 using API.Util;
 using AutoMapper;
@@ -19,9 +19,9 @@ namespace API.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        private readonly IPhotoUploadService _photoUploadService;
+        private readonly IPhotoService _photoUploadService;
 
-        public UsersController(IUnitOfWork unitOfWork, IMapper mapper, IPhotoUploadService photoUploadService)
+        public UsersController(IUnitOfWork unitOfWork, IMapper mapper, IPhotoService photoUploadService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;

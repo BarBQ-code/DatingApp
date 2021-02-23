@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Exstensions
+namespace API.Extensions
 {
     public class PagedList<T> : List<T>
     {

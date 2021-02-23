@@ -1,5 +1,5 @@
 ﻿using API.Entities;
-using API.Exstensions;
+using API.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

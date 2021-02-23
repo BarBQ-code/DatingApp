@@ -1,4 +1,4 @@
-using API.Exstensions;
+using API.Extensions;
 using API.Hubs;
 using API.Middleware;
 using Microsoft.AspNetCore.Builder;
