@@ -7,7 +7,6 @@ using API.Extensions;
 using API.Interfaces;
 using API.Util;
 using AutoMapper;
-using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -47,7 +46,7 @@ namespace API.Controllers
         [HttpGet("{username}", Name = "GetUser")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
-            return await _unitOfWork.UserRepository.GetMemberAsync(username);
+            return await _unitOfWork.UserRepository.GetMemberAsync(username, User.GetUsername() == username);
         }
 
         [HttpPut]
@@ -85,11 +84,6 @@ namespace API.Controllers
                 PublicId = result.PublicId
             };
 
-            if (user.Photos.Count == 0)
-            {
-                photo.IsMain = true;
-            }
-            
             user.Photos.Add(photo);
 
             if (await _unitOfWork.Complete())
