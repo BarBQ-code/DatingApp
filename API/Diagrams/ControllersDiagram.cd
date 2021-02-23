@@ -38,7 +38,7 @@
   <Class Name="API.Controllers.AdminController">
     <Position X="9" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAABAgAAAAAAAAAAgAAAAAAAAAAAEAABAAAAAAABAA=</HashCode>
       <FileName>Controllers\AdminController.cs</FileName>
     </TypeIdentifier>
   </Class>
