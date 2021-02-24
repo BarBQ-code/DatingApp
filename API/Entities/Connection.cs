@@ -5,7 +5,7 @@
         public string ConnectionId { get; set; }
         public string UserName { get; set; }
 
-        public Connection() { } //ctor for enitity framework
+        public Connection() { } //ctor for entity framework
 
         public Connection(string connectionId, string userName)
         {
