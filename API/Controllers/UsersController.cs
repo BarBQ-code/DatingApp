@@ -18,13 +18,13 @@ namespace API.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        private readonly IPhotoService _photoUploadService;
+        private readonly IPhotoService _photoService;
 
-        public UsersController(IUnitOfWork unitOfWork, IMapper mapper, IPhotoService photoUploadService)
+        public UsersController(IUnitOfWork unitOfWork, IMapper mapper, IPhotoService photoService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            _photoUploadService = photoUploadService;
+            _photoService = photoService;
         }
         
         [HttpGet]
@@ -71,7 +71,7 @@ namespace API.Controllers
             var username = User.GetUsername();
             var user = await _unitOfWork.UserRepository.GetUserByUserNameAsync(username);
 
-            var result = await _photoUploadService.AddPhotoAsync(file);
+            var result = await _photoService.AddPhotoAsync(file);
 
             if (result.Error != null)
             {
@@ -134,7 +134,7 @@ namespace API.Controllers
 
             if (photo.PublicId != null)
             {
-                var result = await _photoUploadService.DeletePhotoAsync(photo.PublicId);
+                var result = await _photoService.DeletePhotoAsync(photo.PublicId);
                 if (result.Error != null) 
                     return BadRequest(result.Error.Message);
             }
