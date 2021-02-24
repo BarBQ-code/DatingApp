@@ -14,8 +14,7 @@ namespace API.Controllers
     public class LikesController : BaseApiController
     {
         private readonly IUnitOfWork _unitOfWork;
-
-
+        
         public LikesController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
