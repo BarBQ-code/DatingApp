@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Extensions
 {
-    public static class DateTimeExstensions
+    public static class DateTimeExtensions
     {
         /// <summary>
         /// Work around for a known Entity framework problem with Utc, the framework doesn't save in the db any indication that the date format is of type Utc
