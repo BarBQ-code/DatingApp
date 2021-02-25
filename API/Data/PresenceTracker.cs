@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace API.Hubs
+namespace API.Data
 {
     public class PresenceTracker
     {
