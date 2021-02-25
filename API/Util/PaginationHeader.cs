@@ -1,4 +1,4 @@
-﻿namespace API.Extensions
+﻿namespace API.Util
 {
     public class PaginationHeader
     {
